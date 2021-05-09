@@ -24,7 +24,7 @@
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
-        <button type="submit" class="btn btn-primary">Tambah</button>
+        <button type="submit" class="btn btn-light rounded-pill font-weight-bold ml-2 mt-2">Tambah</button>
     </form>
 </div>
 

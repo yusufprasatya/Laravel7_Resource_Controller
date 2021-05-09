@@ -6,6 +6,17 @@
 
 
 @section('content')
+<div class="row">
+    <div class="col-4">
+        <a href="/article/{{$article->id}}/edit" class="btn btn-light rounded-pill font-weight-bold ml-2">Edit</a>
+        <form action="/article/{{$article->id}}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-light rounded-pill font-weight-bold ml-2">Hapus</button>
+        </form>
+        <a href="{{'/article'}}" class="btn btn-light rounded-pill font-weight-bold ml-2">Back</a>
+    </div>
+</div>
 <div class="card p-3 mb-3">
     <div class="card-title">
         <h3>{{$article->title}}</h3>
@@ -15,22 +26,7 @@
         <p>{{$article->subject}}</p>
     </div>
     <div class="card-footer">
-        <div class="row">
-            <div class="col">
-                <a href="/article/{{$article->id}}/edit" class="btn btn-primary">Edit</a>
-            </div>
-            <div class="col">
-                <form action="/article/{{$article->id}}" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn btn-danger">Hapus</button>
 
-                </form>
-            </div>
-            <div class="col">
-                <a href="{{'/article'}}" class="btn btn-primary btn-sm">Back</a></div>
-
-        </div>
     </div>
 
 </div>
